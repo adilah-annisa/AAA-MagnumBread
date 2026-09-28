@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AAA-MagnumBread</string>
+    <string name="snack_project">SNACK\nPROJECT</string>
+
+    <!-- Halaman 1 -->
+    <string name="keterangan">Discover my favorite snack!</string>
+    <string name="my_project">♡ My Project ♡</string>
+    <string name="creator">made with ♡ by Adilah Annisa</string>
+
+    <!-- Halaman 2 -->
+    <string name="detail_snack">Detail Snack</string>
+    <string name="back">Kembali</string>
+    <string name="magnum_bread">Magnum Bread</string>
+    <string name="momoyo">♡ Momoyo ♡</string>
+    <string name="snack_description">
+        Magnum Bread Momoyo adalah roti lembut dengan topping cokelat
+        premium, dihiasi crunchy choco chip dan lelehan cokelat yang kaya rasa.
+        </string>
+
+    <!-- Content Description -->
+    <string name="desc_logo">Logo Snack Project</string>
+    <string name="desc_snack">Magnum Bread Momoyo</string>
+    <string name="desc_cat">Cat</string>
+</resources>

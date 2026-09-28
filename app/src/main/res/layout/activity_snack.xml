@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gingham"
+    tools:context=".SnackActivity">
+
+    <ImageView
+        android:id="@+id/imgHeader"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/bannerpink"
+
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/backbutton"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <ImageView
+        android:id="@+id/imgDetailBanner"
+        android:layout_width="210dp"
+        android:layout_height="54dp"
+
+        android:layout_marginTop="16dp"
+
+        android:scaleType="fitXY"
+        android:src="@drawable/banner_detailsnack"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- TEXT DETAIL SNACK DI ATAS PNG -->
+
+    <TextView
+        android:id="@+id/tvDetailSnack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/fredoka_bold"
+        android:gravity="center"
+
+        android:text="@string/detail_snack"
+        android:textColor="@color/brown_text"
+        android:textSize="19sp"
+
+        app:layout_constraintTop_toTopOf="@id/imgDetailBanner"
+        app:layout_constraintBottom_toBottomOf="@id/imgDetailBanner"
+        app:layout_constraintStart_toStartOf="@id/imgDetailBanner"
+        app:layout_constraintEnd_toEndOf="@id/imgDetailBanner" />
+
+
+    <!-- ====================================================== -->
+    <!-- COOKING MAMA ICON KANAN -->
+    <!-- ====================================================== -->
+
+    <ImageView
+        android:id="@+id/imgCookingMama"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/cookingmamalogo"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- ====================================================== -->
+    <!-- CONTAINER MAGNUM BREAD / MOMOYO - PNG FIGMA -->
+    <!-- ====================================================== -->
+
+
+    <!-- MAGNUM BREAD TEXT -->
+
+    <ImageView
+        android:id="@+id/imgNameBanner"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+
+        android:scaleType="fitXY"
+        android:src="@drawable/bannermb"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgHeader" />
+
+    <TextView
+        android:id="@+id/tvMagnumBread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/fredoka_bold"
+
+        android:text="@string/magnum_bread"
+        android:textColor="@color/chocolate_text"
+        android:textSize="27sp"
+
+        app:layout_constraintTop_toTopOf="@id/imgNameBanner"
+        app:layout_constraintBottom_toTopOf="@id/tvMomoyo"
+        app:layout_constraintStart_toStartOf="@id/imgNameBanner"
+        app:layout_constraintEnd_toEndOf="@id/imgNameBanner" />
+
+
+    <!-- MOMOYO TEXT -->
+
+    <TextView
+        android:id="@+id/tvMomoyo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/fredoka_bold"
+
+        android:text="@string/momoyo"
+        android:textColor="@color/momoyo_pink"
+        android:textSize="19sp"
+
+        app:layout_constraintTop_toBottomOf="@id/tvMagnumBread"
+        app:layout_constraintBottom_toBottomOf="@id/imgNameBanner"
+        app:layout_constraintStart_toStartOf="@id/imgNameBanner"
+        app:layout_constraintEnd_toEndOf="@id/imgNameBanner" />
+
+
+    <!-- ====================================================== -->
+    <!-- GAMBAR MAGNUM BREAD + PLATE -->
+    <!-- ====================================================== -->
+
+    <ImageView
+        android:id="@+id/imgSnackDetail"
+        android:layout_width="365dp"
+        android:layout_height="218dp"
+
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="18dp"
+
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/desc_snack"
+        android:scaleType="fitCenter"
+        android:src="@drawable/magnumbread_decorated"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgNameBanner" />
+
+
+    <!-- CONTAINER KETERANGAN - PNG FIGMA -->
+
+    <ImageView
+        android:id="@+id/imgDescriptionBox"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+
+        android:adjustViewBounds="true"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/bannerdeskripsi"
+
+        app:layout_constraintTop_toBottomOf="@id/imgSnackDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- TEXT KETERANGAN -->
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+
+        android:fontFamily="@font/fredoka_regular"
+        android:gravity="center"
+
+        android:text="@string/snack_description"
+        android:textColor="@color/chocolate_text"
+        android:textSize="12sp"
+
+        app:layout_constraintTop_toTopOf="@id/imgDescriptionBox"
+        app:layout_constraintBottom_toBottomOf="@id/imgDescriptionBox"
+        app:layout_constraintStart_toStartOf="@id/imgDescriptionBox"
+        app:layout_constraintEnd_toEndOf="@id/imgDescriptionBox" />
+
+
+    <!-- ====================================================== -->
+    <!-- CONTAINER KOMPOSISI GIZI - PNG FIGMA -->
+    <!-- ====================================================== -->
+
+    <ImageView
+        android:id="@+id/imgNutritionBox"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/banner_komposisigizi"
+
+        app:layout_constraintTop_toBottomOf="@id/imgDescriptionBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+   />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
