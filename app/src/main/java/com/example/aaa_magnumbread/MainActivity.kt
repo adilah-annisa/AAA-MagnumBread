@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnMyProject.setOnClickListener {
 
-            val intent = Intent(this, SnackActivity::class.java)
+            val intent = Intent(this, WebViewActivity::class.java)
             startActivity(intent)
         }
     }

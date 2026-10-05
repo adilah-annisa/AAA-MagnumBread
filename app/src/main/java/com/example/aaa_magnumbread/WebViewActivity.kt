@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aaa_magnumbread.databinding.ActivitySnackBinding
 
-class SnackActivity : AppCompatActivity() {
+class WebViewActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySnackBinding
 
