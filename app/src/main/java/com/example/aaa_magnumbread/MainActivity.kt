@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnMyProject.setOnClickListener {
+        binding.btnToWebView.setOnClickListener {
 
             val intent = Intent(this, WebViewActivity::class.java)
             startActivity(intent)

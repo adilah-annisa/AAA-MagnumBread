@@ -1,193 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gingham"
-    tools:context=".MainActivity">
+    android:background="#F7FAFC"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="52dp">
 
-    <!--  Judul Project  -->
+
+    <android.widget.Button
+        android:id="@+id/btncucidansetrika"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Cuci dan Setrika"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <android.widget.Button
+        android:id="@+id/btnCuciKering"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="204dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Cuci kering"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="282dp" />
+
+    <android.widget.Button
+        android:id="@+id/btnExpress"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="204dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Express"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="436dp" />
+
+    <android.widget.Button
+        android:id="@+id/btnSetrikaSaja"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Setrika Saja"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="436dp" />
+
+    <ImageView
+        android:id="@+id/imgBanner"
+        android:layout_width="408dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Gratis Jemput dan Antar"
+        android:scaleType="fitCenter"
+        android:src="@drawable/infobannerlaundry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/description" />
 
     <TextView
-        android:id="@+id/tvSnackProjectBack"
-        android:layout_width="309dp"
-        android:layout_height="141dp"
-        android:layout_marginTop="56dp"
-
-        android:fontFamily="@font/fredoka_bold"
-        android:gravity="center"
-        android:shadowColor="#6CCBEA"
-
-        android:shadowDx="4"
-        android:shadowDy="5"
-        android:shadowRadius="1"
-        android:text="@string/snack_project"
-
-        android:textAlignment="center"
-        android:textColor="#FFE76B"
-        android:textSize="49sp"
-        android:textStyle="bold"
-
+        android:id="@+id/greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Halo, Adilah👋"
+        android:textSize="20sp"
+        android:textColor="#102A43"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvSnackProject"
+        android:id="@+id/pilihlayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:fontFamily="@font/fredoka_bold"
-        android:gravity="center"
-        android:shadowColor="#6CCBEA"
-
-        android:shadowDx="4"
-        android:shadowDy="5"
-        android:shadowRadius="1"
-        android:text="@string/snack_project"
-
-        android:textAlignment="center"
-        android:textColor="#EF7097"
-        android:textSize="46sp"
-        android:textStyle="bold"
-
-        app:layout_constraintTop_toTopOf="@id/tvSnackProjectBack"
-        app:layout_constraintBottom_toBottomOf="@id/tvSnackProjectBack"
-        app:layout_constraintStart_toStartOf="@id/tvSnackProjectBack"
-        app:layout_constraintEnd_toEndOf="@id/tvSnackProjectBack" />
-
-    <!--  Keterangan Project -->
-    <ImageView
-        android:id="@+id/imgDiscoverBox"
-        android:layout_width="0dp"
-        android:layout_height="58dp"
-
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-
-        app:srcCompat="@drawable/discover_box"
-        app:layout_constraintTop_toBottomOf="@id/tvSnackProject"
+        android:layout_marginTop="236dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Pilih Layanan"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
-        android:id="@+id/tvKeterangan"
-        android:layout_width="0dp"
+        android:id="@+id/lihatsemua"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginEnd="16dp"
-
-        android:fontFamily="@font/fredoka_bold"
-        android:gravity="center"
-        android:text="@string/keterangan"
-        android:textColor="@color/brown_text"
-        android:textSize="17sp"
-        android:translationX="9dp"
-
-        app:layout_constraintTop_toTopOf="@id/imgDiscoverBox"
-        app:layout_constraintBottom_toBottomOf="@id/imgDiscoverBox"
-        app:layout_constraintStart_toStartOf="@id/imgDiscoverBox"
-        app:layout_constraintEnd_toEndOf="@id/imgDiscoverBox" />
-
-    <!-- Gambar Kucing (Basiileaf) -->
-    <ImageView
-        android:id="@+id/imgCat1"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:contentDescription="@string/desc_cat"
-        android:scaleType="fitCenter"
-
-        android:translationX="-55dp"
-        android:translationY="-2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgDiscoverBox"
-
-        app:layout_constraintStart_toStartOf="@+id/imgDiscoverBox"
-        app:layout_constraintTop_toTopOf="@+id/imgDiscoverBox"
-        app:layout_constraintVertical_bias="0.485"
-        app:srcCompat="@drawable/basiileaf" />
-
-    <!--  Gambar Magnum Bread  -->
-    <ImageView
-        android:id="@+id/imgSnack"
-        android:layout_width="0dp"
-        android:layout_height="290dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="10dp"
-        android:adjustViewBounds="true"
-
-        android:contentDescription="@string/desc_snack"
-        android:scaleType="fitCenter"
-
+        android:layout_marginTop="244dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Lihat Semua"
+        android:textColor="#1677E8"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgDiscoverBox"
-        app:srcCompat="@drawable/magnumbread_decorated" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Button My Project   -->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Saatnya laundry, tinggal klik"
+        android:textColor="#6B7C93"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="59dp" />
+
     <Button
-        android:id="@+id/btnMyProject"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="48dp"
-
-        android:backgroundTint="@color/button_pink"
-
-        android:fontFamily="@font/fredoka_bold"
-        android:strokeColor="@color/button_stroke"
-
-        android:text="@string/my_project"
-        android:textColor="@color/brown_text"
-
-        android:textSize="18sp"
+        android:id="@+id/btnToWebView"
+        android:layout_width="358dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="#0B2D5C"
+        android:text="Pergi Ke WebView"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgSnack" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSetrikaSaja" />
 
-    <!--  Footer  -->
-    <ImageView
-        android:id="@+id/imgFooterBadge"
-        android:layout_width="0dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="18dp"
-        android:layout_margin="36dp"
 
-        android:layout_marginBottom="18dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/badge"
-
-        app:layout_constraintTop_toBottomOf="@id/btnMyProject"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-         />
-
-    <TextView
-        android:id="@+id/tvCreator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:fontFamily="@font/fredoka_bold"
-        android:text="@string/creator"
-
-        android:textColor="@color/brown_text"
-        android:textSize="18sp"
-        android:gravity="center"
-
-        app:layout_constraintTop_toTopOf="@id/imgFooterBadge"
-        app:layout_constraintBottom_toBottomOf="@id/imgFooterBadge"
-        app:layout_constraintStart_toStartOf="@id/imgFooterBadge"
-        app:layout_constraintEnd_toEndOf="@id/imgFooterBadge" />
 </androidx.constraintlayout.widget.ConstraintLayout>
