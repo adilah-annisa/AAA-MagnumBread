@@ -153,5 +153,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSetrikaSaja" />
 
-
+    <Button
+        android:id="@+id/btnWebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tips Laundry"
+        android:textColor="#29476B"
+        android:backgroundTint="#FFFFFF" />
 </androidx.constraintlayout.widget.ConstraintLayout>

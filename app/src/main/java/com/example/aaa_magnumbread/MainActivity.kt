@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aaa_magnumbread.databinding.ActivityMainBinding
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnToWebView.setOnClickListener {
-
-            val intent = Intent(this, WebViewActivity::class.java)
-            startActivity(intent)
+        binding.btnWebView.setOnClickListener {
+            startActivity(
+                Intent(this, WebViewActivity::class.java)
+            )
         }
     }
 }
