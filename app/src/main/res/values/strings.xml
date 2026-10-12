@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">AAA-MagnumBread</string>
+    <string name="snack_project">SNACK\nPROJECT</string>
+
+    <!-- Halaman 1 -->
+    <string name="keterangan">Discover my favorite snack!</string>
+    <string name="my_project">♡ My Project ♡</string>
+    <string name="creator">made with ♡ by Adilah Annisa</string>
+
+    <!-- Halaman 2 -->
+    <string name="detail_snack">Detail Snack</string>
+    <string name="back">Kembali</string>
+    <string name="magnum_bread">Magnum Bread</string>
+    <string name="momoyo">♡ Momoyo ♡</string>
+    <string name="snack_description">
+        Magnum Bread Momoyo adalah roti lembut dengan topping cokelat
+        premium, dihiasi crunchy choco chip dan lelehan cokelat yang kaya rasa.
+        </string>
+
+    <!-- Content Description -->
+    <string name="desc_logo">Logo Snack Project</string>
+    <string name="desc_snack">Magnum Bread Momoyo</string>
+    <string name="desc_cat">Cat</string>
+
+    <!-- Laundry Express   -->
+    <!--  Halaman Login  -->
+    <string name="welcome_title">Selamat Datang!</string>
+    <string name="logo_login_desc">Laundry Express di Login</string>
+    <string name="welcome_desc">Masuk untuk melanjutkan</string>
+    <string name="btn_login">Selamat Datang!</string>
+    <string name="hint_username">Email / Username</string>
+    <string name="hint_password">Password</string>
+    <string name="lupa_password">Lupa Password?</string>
+    <string name="atau">atau</string>
+    <string name="btn_google">Masuk dengan Google</string>
+    <string name="belum_punya_akun">Belum punya akun? Daftar</string>
+
+
+    <!--  Halaman Profil  -->
+    <string name="profile_title">Profil Developer</string>
+
+</resources>
