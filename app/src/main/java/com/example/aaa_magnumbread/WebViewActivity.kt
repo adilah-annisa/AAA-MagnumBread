@@ -4,16 +4,16 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
-import com.example.aaa_magnumbread.databinding.ActivityWebViewBinding
+import com.example.aaa_magnumbread.databinding.ActivityWebviewBinding
 
 class WebViewActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityWebViewBinding
+    private lateinit var binding: ActivityWebviewBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityWebViewBinding.inflate(layoutInflater)
+        binding = ActivityWebviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)

@@ -4,6 +4,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <!--  Warna Palette Laundry  -->
+    <color name="colorPrimary">#FF637DC6</color>
+    <color name="colorPrimaryDark">#0B2D5C</color>
+    <color name="colorAccent">#27C2F3</color>
     <color name="soft_blue">#F7FBFF</color>
     <color name="primary">#FF637DC6</color>
     <color name="dark">#FF2C3E50</color>

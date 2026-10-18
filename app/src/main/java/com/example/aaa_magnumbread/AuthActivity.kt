@@ -2,6 +2,7 @@ package com.example.aaa_magnumbread
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.aaa_magnumbread.databinding.ActivityAuthBinding
 
 class AuthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthBinding

@@ -5,13 +5,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.aaa_magnumbread.databinding.ActivityChoosecatalogBinding
 
 class ChooseCatalogActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityChooseCatalogBinding
+    private lateinit var binding: ActivityChoosecatalogBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityChooseCatalogBinding.inflate(layoutInflater)
+        binding = ActivityChoosecatalogBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
