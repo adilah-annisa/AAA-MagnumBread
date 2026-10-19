@@ -27,7 +27,7 @@
     <string name="welcome_title">Selamat Datang!</string>
     <string name="logo_login_desc">Laundry Express di Login</string>
     <string name="welcome_desc">Masuk untuk melanjutkan</string>
-    <string name="btn_login">Selamat Datang!</string>
+    <string name="btn_login">Login</string>
     <string name="hint_username">Email / Username</string>
     <string name="hint_password">Password</string>
     <string name="lupa_password">Lupa Password?</string>

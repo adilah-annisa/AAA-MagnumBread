@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".AuthActivity"
+            android:theme="@style/Theme.AAAMagnumBread.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"

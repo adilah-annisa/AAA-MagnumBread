@@ -10,13 +10,53 @@
     tools:layout_editor_absoluteX="16dp"
     tools:layout_editor_absoluteY="52dp">
 
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Saatnya laundry, tinggal klik"
+        android:textColor="#6B7C93"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/greetings"
+        app:layout_constraintTop_toBottomOf="@id/greetings" />
+
+    <TextView
+        android:id="@+id/greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Halo, Adilah👋"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgBanner"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Gratis Jemput dan Antar"
+        android:scaleType="fitCenter"
+        android:src="@drawable/infobannerlaundry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
 
     <android.widget.Button
         android:id="@+id/btncucidansetrika"
         android:layout_width="173dp"
         android:layout_height="138dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_layanan"
         android:backgroundTint="@null"
         android:fontFamily="@font/poppins_bold"
@@ -24,95 +64,71 @@
         android:textColor="#102A43"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btncucidansetrika"
         app:layout_constraintTop_toBottomOf="@+id/pilihlayanan" />
 
     <android.widget.Button
         android:id="@+id/btnCuciKering"
         android:layout_width="173dp"
         android:layout_height="138dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_layanan"
         android:backgroundTint="@null"
         android:fontFamily="@font/poppins_bold"
         android:text="Cuci kering"
         android:textColor="#102A43"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/lihatsemua" />
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="@+id/btncucidansetrika"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btncucidansetrika" />
 
     <android.widget.Button
         android:id="@+id/btnExpress"
         android:layout_width="173dp"
         android:layout_height="138dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/button_layanan"
         android:backgroundTint="@null"
         android:fontFamily="@font/poppins_semibold"
         android:text="Express"
         android:textColor="#102A43"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCuciKering" />
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnSetrikaSaja"
+        app:layout_constraintTop_toTopOf="@+id/btnSetrikaSaja" />
 
     <android.widget.Button
         android:id="@+id/btnSetrikaSaja"
         android:layout_width="173dp"
         android:layout_height="138dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_layanan"
         android:backgroundTint="@null"
         android:fontFamily="@font/poppins_semibold"
         android:text="Setrika Saja"
         android:textColor="#102A43"
         android:textSize="20sp"
+        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnExpress"
         app:layout_constraintTop_toBottomOf="@+id/btncucidansetrika" />
-
-    <ImageView
-        android:id="@+id/imgBanner"
-        android:layout_width="408dp"
-        android:layout_height="132dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="Gratis Jemput dan Antar"
-        android:scaleType="fitCenter"
-        android:src="@drawable/infobannerlaundry"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/description" />
-
-    <TextView
-        android:id="@+id/greetings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Halo, Adilah👋"
-        android:textSize="20sp"
-        android:textColor="#102A43"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/pilihlayanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Pilih Layanan"
         android:textColor="#102A43"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toStartOf="@id/imgBanner"
+        app:layout_constraintTop_toBottomOf="@id/imgBanner" />
 
     <TextView
         android:id="@+id/lihatsemua"
@@ -123,35 +139,6 @@
         android:text="Lihat Semua"
         android:textColor="#1677E8"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Saatnya laundry, tinggal klik"
-        android:textColor="#6B7C93"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="59dp" />
-
-    <Button
-        android:id="@+id/btnToWebView"
-        android:layout_width="358dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="26dp"
-        android:backgroundTint="#0B2D5C"
-        android:text="Pergi Ke WebView"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSetrikaSaja" />
-
-
+        app:layout_constraintEnd_toEndOf="@id/imgBanner"
+        app:layout_constraintBaseline_toBaselineOf="@id/pilihlayanan" />
 </androidx.constraintlayout.widget.ConstraintLayout>

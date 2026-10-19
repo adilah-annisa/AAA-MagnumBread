@@ -8,4 +8,120 @@
     android:background="#F7FBFF"
     tools:context=".ChooseCatalogActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@android:color/white"
+        app:titleTextColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/descPilihLayanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Pilih jenis layanan laundry sesuai dengan kebutuhan Anda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlePilihLayanan" />
+
+
+    <TextView
+        android:id="@+id/titlePilihLayanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="Pilih Layanan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/btnDryCleaning"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Dry Cleaning"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="320dp" />
+
+    <android.widget.Button
+        android:id="@+id/btnCuciKering"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Cuci kering"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <android.widget.Button
+        android:id="@+id/btncucidansetrika"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Cuci dan Setrika"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <android.widget.Button
+        android:id="@+id/btnSetrikaSaja"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Setrika Saja"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="320dp" />
+
+    <android.widget.Button
+        android:id="@+id/btnExpress"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Express"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="472dp" />
+
+    <android.widget.Button
+        android:id="@+id/btnBulkyLaundry"
+        android:layout_width="173dp"
+        android:layout_height="138dp"
+        android:layout_marginEnd="224dp"
+        android:background="@drawable/button_layanan"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Bulky Laundry"
+        android:textColor="#102A43"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="472dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

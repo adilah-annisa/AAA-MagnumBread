@@ -11,14 +11,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnToWebView.setOnClickListener {
-
-            val intent = Intent(this, WebViewActivity::class.java)
+        binding.lihatsemua.setOnClickListener {
+            val intent = Intent(this, ChooseCatalogActivity::class.java)
             startActivity(intent)
         }
     }
