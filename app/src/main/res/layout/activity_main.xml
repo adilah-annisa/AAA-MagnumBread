@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Halo, Adilah👋"
         android:textColor="#102A43"
@@ -64,7 +64,7 @@
         android:textColor="#102A43"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btncucidansetrika"
+        app:layout_constraintEnd_toStartOf="@id/btnCuciKering"
         app:layout_constraintTop_toBottomOf="@+id/pilihlayanan" />
 
     <android.widget.Button
@@ -97,7 +97,7 @@
         android:textColor="#102A43"
         android:textSize="20sp"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btnSetrikaSaja"
         app:layout_constraintTop_toTopOf="@+id/btnSetrikaSaja" />
 
@@ -141,4 +141,14 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@id/imgBanner"
         app:layout_constraintBaseline_toBaselineOf="@id/pilihlayanan" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/primary_blue"
+        app:itemTextColor="@color/primary_blue"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

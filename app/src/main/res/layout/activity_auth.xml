@@ -94,7 +94,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:text="@string/btn_login"
             android:textAllCaps="false"
-            android:textColor="@color/surface"
+            android:textColor="@color/primary_blue"
             android:textSize="15sp" />
 
         <TextView

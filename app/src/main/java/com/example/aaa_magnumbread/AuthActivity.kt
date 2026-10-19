@@ -25,8 +25,8 @@ class AuthActivity : AppCompatActivity() {
 
         val isLogin = sharedPref.getBoolean("isLogin", false)
         if (isLogin) {
-            // Step untuk biaa ke MainActivity
-            val i = Intent(this, MainActivity::class.java)
+            // Step untuk biaa ke BaseActivity
+            val i = Intent(this, BaseActivity::class.java)
             startActivity(i)
         }
 
@@ -45,8 +45,8 @@ class AuthActivity : AppCompatActivity() {
                 editor.putBoolean("isLogin", true)
                 editor.apply()
 
-                //Masuk ke MainActivity
-                val i = Intent(this, MainActivity::class.java)
+                //Masuk ke BaseActivity
+                val i = Intent(this, BaseActivity::class.java)
                 startActivity(i)
                 finish()
             // Kondisi apabila Email dan Password Salah
