@@ -31,7 +31,7 @@ class ProfilFragment : Fragment() {
         }
 
         val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
-            binding.btnOnClickListener {
+            binding.btnLogout.setOnClickListener {
                 MaterialAlertDialogBuilder(requireContext())
                     .setTitle("Konfirmasi")
                     .setMessage("Apakah Anda yakin ingin logout?")

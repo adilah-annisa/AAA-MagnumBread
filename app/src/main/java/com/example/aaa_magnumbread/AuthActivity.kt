@@ -28,19 +28,26 @@ class AuthActivity : AppCompatActivity() {
             // Step untuk biaa ke BaseActivity
             val i = Intent(this, BaseActivity::class.java)
             startActivity(i)
+            finish()
         }
 
         binding.btnLogin.setOnClickListener {
-            val email = binding.etEmail.text.toString()
+            // etEmail sekarang dipakai untuk Username
+            val username = binding.etEmail.text.toString().trim()
             val password = binding.etPassword.text.toString()
 
-            // Kondisi apabila User tidak mengisi Email dan Password
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Email dan password wajib diisi", Toast.LENGTH_SHORT)
-            // Kondisi apabila Email tidak pakai '@mail.com'
-            } else if (!email.endsWith("@mail.com")) {
-                binding.etEmail.error = "Email harus berformat '@mail.com'"
-            } else if (email == "laundryexpress@mail.com" && password == "express123" ) {
+            // Data hasil registrasi (tersimpan setelah OTP berhasil)
+            val savedUsername = sharedPref.getString("username", null)
+            val savedPassword = sharedPref.getString("password", null)
+
+            // Kondisi apabila User tidak mengisi Username dan Password
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Username dan password wajib diisi", Toast.LENGTH_SHORT).show()
+
+                // Rule 1: username = password
+                // Rule 2: username & password sama dengan data di SharedPreferences
+            } else if (username == password ||
+                (username == savedUsername && password == savedPassword)) {
                 val editor = sharedPref.edit()
                 editor.putBoolean("isLogin", true)
                 editor.apply()
@@ -49,13 +56,19 @@ class AuthActivity : AppCompatActivity() {
                 val i = Intent(this, BaseActivity::class.java)
                 startActivity(i)
                 finish()
-            // Kondisi apabila Email dan Password Salah
+
+                // Kondisi apabila Username dan Password Salah
             } else {
                 MaterialAlertDialogBuilder(this)
                     .setTitle("Oops!")
-                    .setMessage("Email atau Password Salah! :( ")
+                    .setMessage("Username atau Password Salah! :( ")
                     .show()
             }
+        }
+
+        // Klik "Belum punya akun? Daftar" -> halaman Registrasi
+        binding.noAccount.setOnClickListener {
+            startActivity(Intent(this, RegistrationActivity::class.java))
         }
     }
 }
