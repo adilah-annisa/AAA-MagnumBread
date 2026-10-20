@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.aaa_magnumbread.databinding.ActivityWebviewBinding
 
 class WebViewActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityWebviewBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
