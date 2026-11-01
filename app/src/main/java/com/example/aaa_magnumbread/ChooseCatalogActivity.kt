@@ -79,7 +79,6 @@ class ChooseCatalogActivity : AppCompatActivity() {
                 Toast.makeText(this, "Pilih layanan terlebih dahulu", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
             // Ganti ke halaman berikutnya
             Toast.makeText(this, "Layanan dipilih: $service", Toast.LENGTH_SHORT).show()
         }
