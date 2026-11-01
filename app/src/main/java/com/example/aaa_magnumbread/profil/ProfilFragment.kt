@@ -31,8 +31,8 @@ class ProfilFragment : Fragment() {
         }
 
         val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
-            binding.btnLogout.setOnClickListener {
-                MaterialAlertDialogBuilder(requireContext())
+        binding.btnLogout.setOnClickListener {
+                    MaterialAlertDialogBuilder(requireContext())
                     .setTitle("Konfirmasi")
                     .setMessage("Apakah Anda yakin ingin logout?")
                     .setPositiveButton("Ya") { dialog, _ ->
@@ -52,7 +52,7 @@ class ProfilFragment : Fragment() {
                         Log.e("Info Dialog", "Anda memilih Batal!")
                     }
                     .show()
-            }
+        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

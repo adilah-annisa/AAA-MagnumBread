@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Kartu layanan: putih, sudut membulat. Saat selected = true, border biru -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#DFF4FF" />
+            <stroke android:width="2dp" android:color="#1677E8" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <stroke android:width="1dp" android:color="#D9E5F0" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</selector>
