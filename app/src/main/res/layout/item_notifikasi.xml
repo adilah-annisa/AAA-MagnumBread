@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/bg_service_card"
+    android:elevation="2dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvJudulNotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Pesanan LE-001"
+        android:textColor="#102A43"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvPesanNotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Cucian Anda sudah selesai!"
+        android:textColor="#102A43"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvWaktuNotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="02 Nov 2026, 10.00"
+        android:textColor="#6B7C93"
+        android:textSize="12sp" />
+
+</LinearLayout>
