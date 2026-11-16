@@ -81,7 +81,6 @@ object NotificationHelper {
     }
 
     // ===== Riwayat notifikasi (JSON di SharedPreferences) =====
-
     @Synchronized
     private fun saveHistory(context: Context, item: ModelNotifikasi) {
         val list = getHistory(context).toMutableList()
