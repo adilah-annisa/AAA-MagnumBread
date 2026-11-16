@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aaa_magnumbread.R
+import com.example.aaa_magnumbread.chat.tutorial.TutorialChatActivity
 import com.example.aaa_magnumbread.databinding.ActivityChatBinding
 import kotlin.jvm.java
 

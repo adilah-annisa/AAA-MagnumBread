@@ -1,269 +1,298 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/soft_blue"
-    android:fillViewport="true">
+    android:background="#F7FBFF"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:paddingBottom="80dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="24dp">
+        android:orientation="vertical">
 
-        <!-- HEADER: wave di paling belakang -->
-        <View
-            android:id="@+id/background_header"
-            android:layout_width="0dp"
-            android:layout_height="220dp"
-            android:background="@drawable/bg_header_wave"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="0dp"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/transparent"
-            app:titleTextColor="@color/white"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <TextView
-            android:id="@+id/tvHalo"
-            android:layout_width="wrap_content"
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:text="Halo, Adilah 👋"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:background="@drawable/bg_header"
+            android:orientation="vertical"
+            android:paddingBottom="28dp">
 
-        <TextView
-            android:id="@+id/tvSubtitle"
-            android:layout_width="wrap_content"
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:titleTextColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Halo, Adilah! 👋"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:text="Saatnya laundry, tinggal klik"
+                android:textColor="#DFF4FF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- MENU GRID 3 x 2 -->
+        <GridLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Saatnya laundry, tinggal klik"
-            android:textColor="@color/secondary_light"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@id/tvHalo"
-            app:layout_constraintStart_toStartOf="@id/tvHalo" />
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:columnCount="3">
 
-        <!-- GRID MENU (tugas dosen) -->
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridMenu"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            app:columnCount="3"
-            app:useDefaultMargins="true"
-            app:layout_constraintTop_toBottomOf="@id/background_header"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <com.google.android.material.button.MaterialButton
+            <LinearLayout
                 android:id="@+id/btnMenuLayanan"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Layanan"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                app:icon="@drawable/ic_laundry"
-                app:iconGravity="top"
-                app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal" />
+                android:layout_height="84dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🧺" android:textSize="26sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="Layanan"
+                    android:textColor="#102A43" android:textSize="12sp" />
+            </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <LinearLayout
                 android:id="@+id/btnMenuPesan"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Pesan"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                app:icon="@drawable/ic_chat"
-                app:iconGravity="top"
-                app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal" />
+                android:layout_height="84dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💬" android:textSize="26sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="Pesan"
+                    android:textColor="#102A43" android:textSize="12sp" />
+            </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <LinearLayout
                 android:id="@+id/btnMenuPesanan"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Pesanan"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                app:icon="@drawable/ic_orders"
-                app:iconGravity="top"
-                app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal" />
+                android:layout_height="84dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📋" android:textSize="26sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="Pesanan"
+                    android:textColor="#102A43" android:textSize="12sp" />
+            </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <LinearLayout
                 android:id="@+id/btnMenuJadwal"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Jadwal"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                app:icon="@drawable/ic_schedule"
-                app:iconGravity="top"
-                app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal" />
+                android:layout_height="84dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🗓️" android:textSize="26sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="Jadwal"
+                    android:textColor="#102A43" android:textSize="12sp" />
+            </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <LinearLayout
                 android:id="@+id/btnMenuTracking"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Tracking"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                app:icon="@drawable/ic_delivery"
-                app:iconGravity="top"
-                app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal" />
+                android:layout_height="84dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🚚" android:textSize="26sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="Tracking"
+                    android:textColor="#102A43" android:textSize="12sp" />
+            </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <LinearLayout
                 android:id="@+id/btnMenuBayar"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Bayar"
-                android:textAllCaps="false"
-                android:textSize="11sp"
-                app:icon="@drawable/ic_payment"
-                app:iconGravity="top"
-                app:layout_columnWeight="1"
-                app:layout_gravity="fill_horizontal" />
-        </androidx.gridlayout.widget.GridLayout>
+                android:layout_height="84dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💳" android:textSize="26sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="Bayar"
+                    android:textColor="#102A43" android:textSize="12sp" />
+            </LinearLayout>
+        </GridLayout>
 
-        <!-- KONTEN LAMA, dipindah ke bawah grid -->
-        <ImageView
-            android:id="@+id/imgBanner"
-            android:layout_width="0dp"
-            android:layout_height="160dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:contentDescription="Banner promo"
-            android:scaleType="fitCenter"
-            android:src="@drawable/infobannerlaundry"
-            app:layout_constraintTop_toBottomOf="@id/gridMenu"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <TextView
-            android:id="@+id/tvPilihLayanan"
-            android:layout_width="wrap_content"
+        <!-- BANNER -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Pilih Layanan"
-            android:textColor="@color/text_primary"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/imgBanner"
-            app:layout_constraintStart_toStartOf="@id/imgBanner" />
-
-        <TextView
-            android:id="@+id/lihatSemua"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:padding="8dp"
-            android:text="Lihat Semua"
-            android:textColor="@color/primary_blue"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@id/tvPilihLayanan"
-            app:layout_constraintEnd_toEndOf="@id/imgBanner" />
-
-        <Button
-            android:id="@+id/btncucidansetrika"
-            android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/button_layanan"
-            android:gravity="center"
-            android:text="CUCI DAN SETRIKA"
-            android:textColor="@color/text_primary"
-            android:textStyle="bold"
-            app:backgroundTint="@null"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintTop_toBottomOf="@id/tvPilihLayanan"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnCuciKering" />
-
-        <Button
-            android:id="@+id/btnCuciKering"
-            android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/button_layanan"
-            android:gravity="center"
-            android:text="CUCI KERING"
-            android:textColor="@color/text_primary"
-            android:textStyle="bold"
-            app:backgroundTint="@null"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintTop_toTopOf="@id/btncucidansetrika"
-            app:layout_constraintStart_toEndOf="@id/btncucidansetrika"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/btnSetrikaSaja"
-            android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/button_layanan"
-            android:gravity="center"
-            android:text="SETRIKA SAJA"
-            android:textColor="@color/text_primary"
-            android:textStyle="bold"
-            app:backgroundTint="@null"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintTop_toBottomOf="@id/btncucidansetrika"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnExpress" />
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_banner"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gratis Jemput &amp; Antar!"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Untuk pemesanan pertama"
+                android:textColor="#DFF4FF"
+                android:textSize="13sp" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btnExpress"
-            android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/button_layanan"
-            android:gravity="center"
-            android:text="EXPRESS"
-            android:textColor="@color/text_primary"
-            android:textStyle="bold"
-            app:backgroundTint="@null"
-            app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintTop_toTopOf="@id/btnSetrikaSaja"
-            app:layout_constraintStart_toEndOf="@id/btnSetrikaSaja"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <Button
-            android:id="@+id/btnWebView"
-            android:layout_width="0dp"
+        <!-- PILIH LAYANAN -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/navy"
-            android:text="TIPS LAUNDRY"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/btnSetrikaSaja"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pilih Layanan"
+                android:textColor="#102A43"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/lihatSemua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Lihat Semua"
+                android:textColor="#1677E8"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+        <!-- GRID LAYANAN 2 x 2 -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="14dp"
+            android:columnCount="2">
+
+            <TextView
+                android:id="@+id/btncucidansetrika"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Cuci &amp; Setrika"
+                android:textColor="#102A43"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnCuciKering"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Cuci Kering"
+                android:textColor="#102A43"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnSetrikaSaja"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Setrika Saja"
+                android:textColor="#102A43"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnExpress"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_card"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Express"
+                android:textColor="#102A43"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </GridLayout>
+
+        <!-- WEBVIEW -->
+        <TextView
+            android:id="@+id/btnWebView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_card"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Kunjungi Website Laundry Express"
+            android:textColor="#1677E8"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
