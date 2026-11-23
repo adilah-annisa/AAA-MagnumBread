@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import com.example.aaa_magnumbread.AuthActivity
 import com.example.aaa_magnumbread.databinding.FragmentProfilBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.example.aaa_magnumbread.alamat.AlamatActivity
+
 class ProfilFragment : Fragment() {
     private var _binding: FragmentProfilBinding? =
         null
@@ -31,6 +33,10 @@ class ProfilFragment : Fragment() {
         }
 
         val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
+        binding.btnAlamat.setOnClickListener {
+            startActivity(Intent(requireContext(), AlamatActivity::class.java))
+        }
+
         binding.btnLogout.setOnClickListener {
                     MaterialAlertDialogBuilder(requireContext())
                     .setTitle("Konfirmasi")

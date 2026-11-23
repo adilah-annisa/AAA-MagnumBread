@@ -8,6 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aaa_magnumbread.databinding.ActivityChoosecatalogBinding
+import android.content.Intent
+import com.example.aaa_magnumbread.pesanan.AturPesananActivity
+
+
+
 
 class ChooseCatalogActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChoosecatalogBinding
@@ -80,7 +85,9 @@ class ChooseCatalogActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             // Ganti ke halaman berikutnya
-            Toast.makeText(this, "Layanan dipilih: $service", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, AturPesananActivity::class.java)
+            intent.putExtra(AturPesananActivity.EXTRA_LAYANAN, service)
+            startActivity(intent)
         }
     }
 

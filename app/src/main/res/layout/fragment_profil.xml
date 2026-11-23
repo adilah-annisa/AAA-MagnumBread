@@ -80,6 +80,20 @@
                     android:textSize="13sp" />
             </LinearLayout>
 
+            <android.widget.Button
+                android:id="@+id/btnAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_button_catalog"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Alamat Saya"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
             <!-- JUDUL BAGIAN -->
             <TextView
                 android:layout_width="wrap_content"
