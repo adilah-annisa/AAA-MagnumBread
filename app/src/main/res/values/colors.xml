@@ -19,6 +19,7 @@
     <color name="secondary_light">#DFF4FF</color>
     <color name="surface">#FFFFFF</color>
     <color name="border">#D9E5F0</color>
+    <color name="border_gray">#D9E5F0</color>
     <color name="success">#22C55E</color>
     <color name="warning">#F59E0B</color>
     <color name="error">#EF4444</color>

@@ -110,8 +110,15 @@ class RegistrationActivity : AppCompatActivity() {
                     Toast.makeText(this@RegistrationActivity, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
 
                     // Pindah ke halaman berikutnya. Ganti dengan tujuan yang kamu pakai sebelumnya.
-                    startActivity(Intent(this@RegistrationActivity, VerifikasiActivity::class.java))
+                    val intent = Intent(this@RegistrationActivity, VerifikasiActivity::class.java).apply {
+                        putExtra("nama", nama)
+                        putExtra("phone", noHp)
+                        putExtra("username", username)
+                        putExtra("password", password)
+                    }
+                    startActivity(intent)
                     finish()
+
                 } else if (response.code() == 409) {
                     // 409 = pelanggaran UNIQUE (username sudah ada)
                     Toast.makeText(this@RegistrationActivity, "Username sudah digunakan", Toast.LENGTH_SHORT).show()
