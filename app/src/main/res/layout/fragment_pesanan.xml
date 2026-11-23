@@ -5,36 +5,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/soft_blue"
+    android:background="#F8FBFE"
     tools:context=".pesanan.PesananFragment">
+
+    <android.widget.Button
+        android:id="@+id/btnPesanBaru"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_button_catalog"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:text="+ Pesan"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvJudulPesanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Pesanan Aktif"
-        android:textColor="@color/text_primary"
+        android:textColor="#102A43"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnPesanBaru"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/btnPesanBaru" />
 
     <TextView
         android:id="@+id/tvPetunjuk"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="20dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Geser pesanan ke kiri untuk menghapus"
-        android:textColor="@color/text_secondary"
+        android:text="Ketuk untuk mengubah, geser ke kiri untuk membatalkan"
+        android:textColor="#6B7C93"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvJudulPesanan" />
+        app:layout_constraintTop_toBottomOf="@id/btnPesanBaru" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPesanan"
@@ -53,13 +69,14 @@
         android:id="@+id/tvKosong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Tidak ada pesanan aktif"
-        android:textColor="@color/text_secondary"
-        android:textSize="16sp"
+        android:gravity="center"
+        android:text="Belum ada pesanan"
+        android:textColor="#6B7C93"
+        android:textSize="15sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
