@@ -5,6 +5,14 @@ import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aaa_magnumbread.databinding.ActivityRegistrationBinding
+import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import com.example.aaa_magnumbread.data.api.SupabaseClient
+import com.example.aaa_magnumbread.data.model.UserRequest
+import com.example.aaa_magnumbread.util.PasswordHasher
+import com.example.aaa_magnumbread.util.SessionManager
+
 
 class RegistrationActivity : AppCompatActivity() {
 
@@ -17,7 +25,7 @@ class RegistrationActivity : AppCompatActivity() {
 
         binding.btnBack.setOnClickListener { finish() }
         binding.txtSudahPunyaAkun.setClickableLink("Masuk") { goToLogin() }
-        binding.btnDaftar.setOnClickListener { validateAndRegister() }
+        binding.btnDaftar.setOnClickListener { daftarKeSupabase() }
     }
 
     private fun validateAndRegister() {
@@ -49,7 +57,6 @@ class RegistrationActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun showError(field: EditText, message: String) {
         field.error = message
         field.requestFocus()
@@ -61,4 +68,62 @@ class RegistrationActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    private fun daftarKeSupabase() {
+        val nama = binding.etNama.text.toString().trim()
+        val noHp = binding.etPhone.text.toString().trim()
+        val username = binding.etUsername.text.toString().trim()
+        val password = binding.etPassword.text.toString()
+        val konfirmasi = binding.etConfirmPassword.text.toString()
+
+        // ----- Validasi -----
+        if (nama.isEmpty() || noHp.isEmpty() || username.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Semua kolom wajib diisi", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (password.length < 6) {
+            Toast.makeText(this, "Password minimal 6 karakter", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (password != konfirmasi) {
+            Toast.makeText(this, "Konfirmasi password tidak sama", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // ----- Kirim ke Supabase (INSERT ke tabel users) -----
+        binding.btnDaftar.isEnabled = false
+        lifecycleScope.launch {
+            try {
+                val body = UserRequest(
+                    nama = nama,
+                    noHp = noHp,
+                    username = username,
+                    password = PasswordHasher.hash(password) // yang dikirim HASH, bukan password asli
+                )
+                val response = SupabaseClient.api.register(body)
+
+                if (response.isSuccessful) {
+                    val user = response.body()?.firstOrNull()
+                    if (user != null) {
+                        SessionManager.saveUser(this@RegistrationActivity, user.id, user.nama)
+                    }
+                    Toast.makeText(this@RegistrationActivity, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
+
+                    // Pindah ke halaman berikutnya. Ganti dengan tujuan yang kamu pakai sebelumnya.
+                    startActivity(Intent(this@RegistrationActivity, VerifikasiActivity::class.java))
+                    finish()
+                } else if (response.code() == 409) {
+                    // 409 = pelanggaran UNIQUE (username sudah ada)
+                    Toast.makeText(this@RegistrationActivity, "Username sudah digunakan", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this@RegistrationActivity, "Registrasi gagal (kode ${response.code()})", Toast.LENGTH_LONG).show()
+                }
+            } catch (e: Exception) {
+                Toast.makeText(this@RegistrationActivity, "Tidak dapat terhubung ke server", Toast.LENGTH_LONG).show()
+            } finally {
+                binding.btnDaftar.isEnabled = true
+            }
+        }
+    }
+
 }
